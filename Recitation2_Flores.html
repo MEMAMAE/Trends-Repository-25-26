@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ultimate College Life Web Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffd700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        ul, ol {
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        li::before {
+            content: '🎯';
+            position: absolute;
+            left: -30px;
+            top: 0;
+        }
+
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #ff3b2e, #ff8c00);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            section { padding: 20px; margin: 10px; }
+            img { width: 150px; height: 150px; }
+            ul, ol { padding-left: 10px; }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i class="fas fa-graduation-cap"></i> My Ultimate College Life Web Page</h1>
+    <h2>Andrey Thurvy R. Flores</h2>
+</header>
+
+<hr>
+
+<section class="fade-in">
+    <h3><i class="fas fa-user"></i> About Me</h3>
+    <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-1/611849353_2733782603640108_3420846768547638635_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeG1EkBTjFNO7RbN77a7OlfhxeeNt5wqHAPF5423nCocA6iblDPSdkoVC9MMFhY8A7av1UAfQNngJEsOccqCw-1G&_nc_ohc=XATXfmNs4PwQ7kNvwFsSN1F&_nc_oc=Adk2xfff69UPJwcddDKp2tZcg56z9TxKKxcc2gy3iGG9Rj3QTVAB2ewcsFQa8uloYMI&_nc_zt=24&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=Vajlw0KCreeKYUTjPiNcgg&oh=00_AfunvsBqL9pJTJjo8ofFfUIe4UENqZZCd9THH-8SUwqpaw&oe=699A7F4A" alt="My Photo"> 
+        Hi! I’m <b>Andrey</b>, a passionate and hardworking college student who loves technology and coding <i class="fas fa-code"></i>.
+        I enjoy learning new things and pushing myself to grow every day.
+        College life may be challenging, but I face it with <i>determination and positivity</i> <i class="fas fa-rocket"></i>.
+    </p>
+</section>
+
+<section class="fade-in">
+    <h3><i class="fas fa-backpack"></i> College Must-Haves</h3>
+    <ul>
+        <li><i class="fas fa-laptop"></i> Laptop</li>
+        <li><i class="fas fa-wifi"></i> Stable Internet Connection</li>
+        <li><i class="fas fa-coffee"></i> Coffee</li>
+        <li><i class="fas fa-book"></i> Notebook & Pen</li>
+        <li><i class="fas fa-battery-full"></i> Powerbank</li>
+    </ul>
+</section>
+
+<section class="fade-in">
+    <h3><i class="fas fa-clock"></i> My Daily Routine</h3>
+    <ol>
+        <li><i class="fas fa-sun"></i> Wake up early and prepare for school</li>
+        <li><i class="fas fa-chalkboard-teacher"></i> Attend classes and take notes</li>
+        <li><i class="fas fa-utensils"></i> Lunch break with friends</li>
+        <li><i class="fas fa-code"></i> Work on coding projects</li>
+        <li><i class="fas fa-book-open"></i> Do assignments and review lessons</li>
+        <li><i class="fas fa-tv"></i> Relax and watch series</li>
+    </ol>
+</section>
+
+<section class="fade-in">
+    <h3><i class="fas fa-gamepad"></i> Hobbies & Interests</h3>
+    <ul>
+        <li><i class="fas fa-gamepad"></i> Playing Online Games</li>
+        <li><i class="fas fa-music"></i> Listening to Music</li>
+        <li><i class="fas fa-video"></i> Watching Tech Videos</li>
+        <li><i class="fas fa-pizza-slice"></i> Eating Pizza</li>
+        <li><i class="fas fa-laptop-code"></i> Learning Programming Languages</li>
+    </ul>
+</section>
+
+<section class="fade-in">
+    <h3><i class="fas fa-certificate"></i> Certifications & Seminars</h3>
+    <p>
+        <i class="fas fa-check-circle"></i> Attended Web Development Seminar 2025 <br>
+        <i class="fas fa-check-circle"></i> Completed Basic C++ Programming Course <br>
+        <i class="fas fa-trophy"></i> Participated in Hackathon Event
+    </p>
+</section>
+
+<button onclick="showMessage()"><i class="fas fa-fire"></i> Click Me for Motivation <i class="fas fa-fire"></i></button>
+
+<hr>
+
+<footer>
+    <p><i class="fas fa-copyright"></i> 2026 Andrey Thurvy R. Flores | College Life Journey <i class="fas fa-graduation-cap"></i></p>
+</footer>
+
+<script>
+    function showMessage() {
+        alert("Keep pushing! College life is tough, but so are you! 💪🎓");
+    }
+
+    // Scroll animation
+    const sections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
